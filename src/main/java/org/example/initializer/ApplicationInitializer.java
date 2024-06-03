@@ -10,7 +10,7 @@ public class ApplicationInitializer implements WebApplicationInitializer {
     @Override
     public void onStartup(ServletContext servletContext) {
         final var context = new AnnotationConfigWebApplicationContext();
-        context.scan("org.example.");
+        context.scan("org.example");
         context.refresh();
 
         final var servlet = new DispatcherServlet(context);
